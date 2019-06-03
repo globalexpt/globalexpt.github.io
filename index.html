@@ -52,7 +52,9 @@
             <h1 class="f2 f2-ns fw6 mid-gray">Catalogue</h1>
             <!-- Category -->
             <div ng-repeat="category in catalogue">
-                <h3 class="f3 gray fw2 ttu tracked mv5"><span class="pb2 bb b--black-10">{{category.name}}</span></h3>
+                <h3 class="f3 gray fw2 ttu tracked mv5">
+                    <span class="dib pb2 bb b--black-10">{{category.name}}</span>
+                </h3>
                 <!-- Products -->
                 <div class="cf pa2">
                     <div class="fl w-50 w-25-m w-33-l pa2" ng-repeat="product in category.products">
@@ -77,11 +79,11 @@
     <div id="order" class="tc">
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSchzAB1ftS0yKNxoziFSJy24xApJkMbZB2ExmwDD-2AVurmqw/viewform?embedded=true"
-            width="640" height="1235" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            width="100%" height="1235" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
 
     <!-- ABOUT -->
-    <div id="about" class="ph6 pv2 black-70">
+    <div id="about" class="ph6-ns ph4 pv2 black-70">
         <h1 class="f2 f2-ns fw6 mid-gray tc">About</h1>
         <!-- <a href="mailto:globalexpt@gmail.com" class="link b f3 f2-ns dim black-70 lh-solid">globalexpt@gmail.com</a> -->
 
