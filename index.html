@@ -1,49 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="gei">
-<title> </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-<link rel="stylesheet" href="css/override.css">
+<html lang="en" ng-app="gei" ng-controller="gei-ctrl">
 
-<body class="sans-serif" ng-controller="gei-ctrl">
+<head>
+    <title ng-bind="title">Global Exporters & Importers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="css/override.css">
+
+    <!-- FAVICON: START -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bd56d">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICON: END -->
+</head>
+
+<body class="sans-serif">
     <!-- HEADER -->
     <header>
         <div class="landing-home cover bg-left bg-center-l">
-            <div class="bg-black-60 pb5 pb6-m pb7-l">
-                <nav class="dt w-100 mw8 center">
-                    <div class="dtc w2 v-mid pa3">
-                        <a href="/" class="dib w2 h2 pa1 br2 ba bw1 b--dashed b--white-90 grow-large border-box">
-                            <img src="img/gei-logo.png" />
+            <div class="bg-black-60 pb6">
+                <nav class="db dt-l w-100 border-box pa3 ph5-l">
+                    <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
+                        <img src="img/bag.svg" class="dib w2">
+                    </a>
+                    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+                        <a ng-repeat="menu in nav" class="f6 fw4 white-70 hover-white link dib mr3 mr4-l"
+                            href="{{menu.href}}" title="{{menu.label}}" ng-bind="menu.label">
                         </a>
                     </div>
-                    <div class="dtc v-mid tr pa3 f5">
-                        <a class="fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/">Home</a>
-                        <a class="fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3"
-                            href="/#catalogue">Catalogue</a>
-                        <a class="fw4 hover-white no-underline white-70 dn dib-l pv2 ph3"
-                            href="/#order">Contact/Order</a>
-                        <a class="fw4 hover-white no-underline white-70 dn dib-l pv2 ph3" href="/#about">About</a>
-                    </div>
                 </nav>
-                <div class="tc-l mt4 mt5-m mt6-l ph3">
-                    <h1 class="f1 f1-l fw3 white-90 mb0 lh-title">Global Exporters <span class="">&amp;</span> Importers
+
+                <div class="tc mt4 mt5-m mt6-l ph3">
+                    <h1 class="f1 fw3 white-90 mb0 lh-title">Global Exporters <span class="">&amp;</span> Importers
                     </h1>
-                    <h2 class="fw3 f3 white-80 mt3 mb4">Manufacturer & Exporter of <span
-                            class="light-blue">custom-printed</span>/<span class="green">custom-designed</span>
-                        Jute/Cotton/Canvas Eco-Friendly Bags
+                    <h2 class="f3 fw2 white-80 mv4">Manufacturer & Exporter of custom-<span
+                            class="fw4 light-blue">printed</span>/<span class="fw4 green">designed</span>
+                        Eco-Friendly Bags made of <span class="fw4">Jute/Cotton/Canvas</span>
                     </h2>
 
-                    <div class="mt5">
+                    <div class="mt6">
                         <!-- <a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3"
                             href="/">Order/Enquire</a>
                         <span class="dib v-mid ph3 white-70 mb3">or</span> -->
-                        <a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" href="">Order /
-                            Enquire</a>
+                        <a class="f6 no-underline grow dib v-mid white ba b--white bw1 br2 ph3 pv2 mb3"
+                            href="#catalogue">
+                            Check our Bags made with <img class="w1 v-mid" src="img/love.svg">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- SECONDARY NAV -->
+    <!-- <nav class="db dt-l w-100 border-box pa3 ph5-l fixed">
+        <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
+            <img src="img/favicon.png" class="dib w2 h2 br-100">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            <a ng-repeat="menu in nav" class="f7 fw4 black-70 hover-black link dib mr3 mr4-l" href="{{menu.href}}"
+                title="{{menu.label}}" ng-bind="menu.label">
+            </a>
+        </div>
+    </nav> -->
 
     <!-- CONTENT -->
     <div id="catalogue" class="mt0 pa5 tc">
@@ -57,9 +80,9 @@
                 </h3>
                 <!-- Products -->
                 <div class="cf pa2">
-                    <div class="fl w-50 w-25-m w-33-l pa2" ng-repeat="product in category.products">
+                    <div class="fl w-33-ns w-50-m w-100 pa2" ng-repeat="product in category.products">
                         <a target="__blank" href="{{product.img}}" class="db link dim tc pointer">
-                            <img src="{{product.img}}" alt="{{product.name}}" class="w-100 db black-10" />
+                            <img ng-src="{{product.img}}" alt="{{product.name}}" class="w-100 db black-10" />
                             <dl class="mt2 f6 lh-copy">
                                 <dt class="clip">Title</dt>
                                 <dd class="ml0 black truncate w-100">{{product.name}}</dd>
@@ -76,7 +99,7 @@
     </div>
 
     <!-- ORDER -->
-    <div id="order" class="tc">
+    <div id="order" class="tc" ng-if="showOrder">
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSchzAB1ftS0yKNxoziFSJy24xApJkMbZB2ExmwDD-2AVurmqw/viewform?embedded=true"
             width="100%" height="1235" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
@@ -84,7 +107,7 @@
 
     <!-- ABOUT -->
     <div id="about" class="ph6-ns ph4 pv2 black-70">
-        <h1 class="f2 f2-ns fw6 mid-gray tc">About</h1>
+        <h1 class="f2 f2-ns fw6 mid-gray tc">Contact</h1>
         <!-- <a href="mailto:globalexpt@gmail.com" class="link b f3 f2-ns dim black-70 lh-solid">globalexpt@gmail.com</a> -->
 
         <div class="mw7 center ph3-ns cf">
@@ -108,22 +131,30 @@
                 </dl>
             </div>
         </div>
-    </div>
 
-    <!-- FOOTER -->
-    <footer class="pv4 ph3 ph5-m ph6-l mid-gray mt5 ">
-        <small class="f6 db tc">© {{ year }} <b class="ttu">Global Exporters &amp; Importers</b>, All Rights
-            Reserved</small>
-        <div class="tc mt3">
-            <a href="https://www.facebook.com/globeximp/" target="__blank" title="Facebook"
-                class="f6 dib ph2 link mid-gray dim">Facebook</a>
-            <a href="/terms/" title="Terms" class="f6 dib ph2 link mid-gray dim">Terms of Use</a>
-            <a href="/privacy/" title="Privacy" class="f6 dib ph2 link mid-gray dim">Privacy</a>
+        <div class="mapouter w-100" ng-if="showMap">
+            <div class="gmap_canvas" width="100%">
+                <iframe width="100%" height="400" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Global%20Exporters%20%26%20Importers&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
         </div>
-    </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-    <script src="js/controller.js"></script>
+        <!-- FOOTER -->
+        <!-- bt b--black-10 -->
+        <footer class="pv4 ph3 ph5-m ph6-l mid-gray mt2">
+            <small class="f6 db tc">© {{ year }} <b class="ttu">Global Exporters &amp; Importers</b>, All Rights
+                Reserved</small>
+            <div class="tc mt3">
+                <a href="https://www.facebook.com/globeximp/" target="__blank" title="Facebook"
+                    class="f6 dib ph2 link mid-gray dim">Facebook</a>
+                <a href="/terms/" title="Terms" class="f6 dib ph2 link mid-gray dim">Terms of Use</a>
+                <a href="/privacy/" title="Privacy" class="f6 dib ph2 link mid-gray dim">Privacy</a>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+        <script src="js/controller.js"></script>
 </body>
 
 </html>

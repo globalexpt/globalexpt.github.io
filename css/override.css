@@ -2,3 +2,14 @@
     /* background-image: url(http://mrmrs.github.io/photos/u/011.jpg) */
     background-image: url("../img/gei-bg-fabric.jpg");
 }
+
+/* GMAP */
+.mapouter {
+    position: relative;
+    text-align: right;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+}

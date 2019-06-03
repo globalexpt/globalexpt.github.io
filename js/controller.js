@@ -1,20 +1,15 @@
 const controller = ($scope, $http) => {
     $scope.year = new Date().getFullYear();
+    $scope.title = '';
     $scope.catalogue = [];
-    $scope.about = [];
 
     $http
-        .get('res/catalogue.json')
+        .get('res/config.json')
         .then(responseDataTx)
-        .then((catalogue) => {
-            $scope.catalogue = catalogue;
-        });
-
-    $http
-        .get('res/aboutt.json')
-        .then(responseDataTx)
-        .then((about) => {
-            $scope.about = about;
+        .then((config) => {
+            Object
+                .keys(config)
+                .forEach(key => $scope[key] = config[key]);
         });
 }
 

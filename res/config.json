@@ -1,0 +1,80 @@
+{
+    "title": "Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags",
+    "showOrder": true,
+    "showMap": true,
+    "nav": [
+        {
+            "label": "Home",
+            "href": "#"
+        },
+        {
+            "label": "Catalogue",
+            "href": "#catalogue"
+        },
+        {
+            "label": "Order",
+            "href": "#order"
+        },
+        {
+            "label": "Contact",
+            "href": "#about"
+        }
+    ],
+    "catalogue": [
+        {
+            "name": "Jute Shopping Bags",
+            "products": [
+                {
+                    "name": "Jute Shopping Bag",
+                    "img": "img/catalog/1Jute_Shopping_Bags/jsb1.jpg",
+                    "desc": "CODE: 565"
+                },
+                {
+                    "name": "Jute Shopping Bag",
+                    "img": "img/catalog/1Jute_Shopping_Bags/jsb2.jpg",
+                    "desc": "CODE: 907"
+                },
+                {
+                    "name": "Jute Big Shopper",
+                    "img": "img/catalog/1Jute_Shopping_Bags/jsb3.jpg",
+                    "desc": "CODE: 570"
+                }
+            ]
+        },
+        {
+            "name": "Eco-Friendly Bags",
+            "products": [
+                {
+                    "name": "Reuse Reduce Recycle",
+                    "img": "img/catalog/2Eco_Friendly_Bags/efb1.jpg",
+                    "desc": "CODE: 572"
+                },
+                {
+                    "name": "Save our Earth",
+                    "img": "img/catalog/2Eco_Friendly_Bags/efb2.jpg",
+                    "desc": "CODE: 573"
+                }
+            ]
+        },
+        {
+            "name": "Cotton Bags",
+            "products": [
+                {
+                    "name": "Short Handle Cotton Bag",
+                    "img": "img/catalog/8Cotton_Bag/cb1.jpg",
+                    "desc": "CODE: 627"
+                },
+                {
+                    "name": "Shoulder Handle Cotton Bag",
+                    "img": "img/catalog/8Cotton_Bag/cb2.jpg",
+                    "desc": "CODE: 631"
+                },
+                {
+                    "name": "Printed Cotton Bag",
+                    "img": "img/catalog/8Cotton_Bag/cb3.jpg",
+                    "desc": "CODE: 626"
+                }
+            ]
+        }
+    ]
+}
