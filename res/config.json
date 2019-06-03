@@ -80,6 +80,16 @@
         {
             "name": "Jute Pouches",
             "products": [
+                {
+                    "name": "Natural-Colored Jute Pouch",
+                    "img": "img/catalog/7Jute_Pouches/jp1.jpg",
+                    "desc": "CODE: 159"
+                },
+                {
+                    "name": "Colored Jute Pouch",
+                    "img": "img/catalog/7Jute_Pouches/jp2.jpg",
+                    "desc": "CODE: 160"
+                }
             ]
         }
     ]
