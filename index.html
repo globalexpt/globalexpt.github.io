@@ -3,22 +3,35 @@
 
 <head>
     <title ng-bind="title">Global Exporters & Importers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <link rel="stylesheet" href="css/override.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
     <!-- OPEN GRAPH META TAGS: START -->
-    <meta property="og:type" content="business.business">
-    <meta property="og:title" content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
+    <meta name="description"
+        content="Manufacturer & Exporter of custom-printed/designed Eco-Friendly Bags made of Jute/Cotton/Canvas">
+    <meta name="keywords" content="Business, Manufacture, Export, Jute, Cotton, Canvas, Bags">
+    <link rel="author" content="Sk Jhohev" href="https://www.facebook.com/johev09" />
+    <link rel="canonical" href="http://www.globaljutebags.in" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business">
     <meta property="og:url" content="http://www.globaljutebags.in">
-    <meta property="og:image" content="http://www.globaljutebags.in/img/bag.png">
+    <meta property="og:title" content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
     <meta property="og:description"
         content="Manufacturer & Exporter of custom-printed/designed Eco-Friendly Bags made of Jute/Cotton/Canvas">
-    <meta property="business:contact_data:street_address" content="8/1 R.L. Ghosh Road, Budge Budge">
-    <meta property="business:contact_data:locality" content="Kolkata">
-    <meta property="business:contact_data:region" content="West Bengal">
-    <meta property="business:contact_data:postal_code" content="700137">
-    <meta property="business:contact_data:country_name" content="India">
+    <meta property="og:image" content="https://www.globaljutebags.in/img/catalog/8Cotton_Bag/cb3.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://www.globaljutebags.in">
+    <meta property="twitter:title"
+        content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
+    <meta property="twitter:description"
+        content="Manufacturer & Exporter of custom-printed/designed Eco-Friendly Bags made of Jute/Cotton/Canvas">
+    <meta property="twitter:image" content="https://www.globaljutebags.in/img/catalog/8Cotton_Bag/cb3.jpg">
     <!-- OPEN GRAPH META TAGS: END -->
 
     <!-- FAVICON: START -->
@@ -30,6 +43,10 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <!-- FAVICON: END -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="css/override.css">
 </head>
 
 <body class="avenir">
@@ -39,7 +56,7 @@
             <div class="bg-black-60 pb6">
                 <nav class="db dt-l w-100 border-box pa3 ph5-l">
                     <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
-                        <img src="img/bag.svg" class="dib w2">
+                        <img src="img/bag.svg" class="dib w2" alt="Company Logo">
                     </a>
                     <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
                         <a ng-repeat="menu in nav" class="f6 fw4 white-70 hover-white link dib mr3 mr4-l"
@@ -62,7 +79,7 @@
                         <span class="dib v-mid ph3 white-70 mb3">or</span> -->
                         <a class="f5 no-underline grow dib v-mid white ba b--white bw1 br2 ph3 pv2 mb3"
                             href="#catalogue">
-                            Check our Bags made with <img class="w1 v-mid" src="img/love.svg">
+                            Check our Bags made with <img class="w1 v-mid" src="img/love.svg" alt="love">
                         </a>
                     </div>
                 </div>
@@ -96,7 +113,7 @@
                 <div class="cf pa2">
                     <div class="fl w-33-ns w-50-m w-100 pa2" ng-repeat="product in category.products">
                         <a target="__blank" href="{{product.img}}" class="db link dim tc pointer">
-                            <img ng-src="{{product.img}}" alt="{{product.name}}" class="w-100 db black-10" />
+                            <img ng-src="{{product.img}}" alt="Product: {{product.name}}" class="w-100 db black-10" />
                             <dl class="mt2 f6 lh-copy">
                                 <dt class="clip">Title</dt>
                                 <dd class="ml0 black truncate w-100">{{product.name}}</dd>
