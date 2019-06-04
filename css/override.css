@@ -3,6 +3,12 @@
     background-image: url("../img/gei-bg-fabric-min.jpg");
 }
 
+.product:hover {
+    /* border: 1px solid gray;
+    box-sizing: border-box !important;
+    transition: 1s all; */
+}
+
 /* GMAP */
 .mapouter {
     position: relative;
