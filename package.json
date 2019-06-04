@@ -20,5 +20,8 @@
   "homepage": "https://github.com/globalexpt/globalexpt.github.io#readme",
   "devDependencies": {
     "express": "^4.17.1"
+  },
+  "dependencies": {
+    "prerender-node": "^3.2.4"
   }
 }
