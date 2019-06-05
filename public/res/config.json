@@ -108,7 +108,7 @@
             ]
         },
         {
-            "name": "... and more",
+            "name": "Special Purpose Bags",
             "products": [
                 {
                     "name": "Gift Bag",
@@ -120,6 +120,11 @@
                     "img": "img/catalog/9Jute_Beach_Bags/jbb1.jpg",
                     "desc": "CODE: 810"
                 }
+            ]
+        },
+        {
+            "name": "and more...",
+            "products": [
             ]
         }
     ]
