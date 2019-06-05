@@ -138,8 +138,8 @@
                     </a>
                 </h3>
                 <!-- Products -->
-                <div class="cf pa2">
-                    <div class="fl w-33-ns w-50-m w-100 pa2 product" ng-repeat="product in category.products">
+                <div class="flex flex-wrap justify-around pa2">
+                    <div class="w-33-ns w-50-m w-100 pa2 product" ng-repeat="product in category.products">
                         <a target="__blank" href="{{product.img}}" class="db link dim tc pointer">
                             <img ng-src="{{product.img}}" alt="Product: {{product.name}}" class="w-100 db black-10" />
                             <dl class="mt2 f6 lh-copy">
@@ -151,6 +151,20 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- <div class="cf pa2">
+                    <div class="fl w-33-ns w-50-m w-100 pa2 product" ng-repeat="product in category.products">
+                        <a target="__blank" href="{{product.img}}" class="db link dim tc pointer">
+                            <img ng-src="{{product.img}}" alt="Product: {{product.name}}" class="w-100 db black-10" />
+                            <dl class="mt2 f6 lh-copy">
+                                <dt class="clip">Title</dt>
+                                <dd class="ml0 black truncate w-100">{{product.name}}</dd>
+                                <dt class="clip">Artist</dt>
+                                <dd class="ml0 gray truncate w-100">{{product.desc}}</dd>
+                            </dl>
+                        </a>
+                    </div>
+                </div> -->
             </div>
         </article>
     </div>
