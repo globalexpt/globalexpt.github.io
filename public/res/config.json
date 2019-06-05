@@ -23,7 +23,7 @@
     ],
     "categories": [
         {
-            "name": "Jute Shopping Bags",
+            "name": "Shopping Bags",
             "products": [
                 {
                     "name": "Jute Shopping Bag",
@@ -31,8 +31,8 @@
                     "desc": "CODE: 565"
                 },
                 {
-                    "name": "Jute Shopping Bag",
-                    "img": "img/catalog/1Jute_Shopping_Bags/jsb2.jpg",
+                    "name": "Printed Canvas Bag",
+                    "img": "img/catalog/3Jute_Fancy_Bags/jfb1.jpg",
                     "desc": "CODE: 907"
                 },
                 {
@@ -93,22 +93,32 @@
             ]
         },
         {
-            "name": "Handle Bags",
+            "name": "Bottle Bags",
             "products": [
                 {
-                    "name": "Ring Handle Jute Bag",
-                    "img": "img/catalog/4Jute_Handle_Bags/jhb1.jpg",
-                    "desc": "CODE: 785"
+                    "name": "3/6 Bottle Jute Bag",
+                    "img": "img/catalog/5Jute_Wine_Bottle_Bags/jwbb2.jpg",
+                    "desc": "CODE: 619"
                 },
                 {
-                    "name": "Rectangular Cane Handle Jute Bag",
-                    "img": "img/catalog/4Jute_Handle_Bags/jhb2.jpg",
-                    "desc": "CODE: 774"
+                    "name": "1 Bottle Jute Bag",
+                    "img": "img/catalog/5Jute_Wine_Bottle_Bags/jwbb4.jpg",
+                    "desc": "CODE: 620"
+                }
+            ]
+        },
+        {
+            "name": "... and more",
+            "products": [
+                {
+                    "name": "Gift Bag",
+                    "img": "img/catalog/6Jute_Gift_Bags/jgb1-bright.jpg",
+                    "desc": "CODE: 868"
                 },
                 {
-                    "name": "Eye Cane Handle Jute Bag",
-                    "img": "img/catalog/4Jute_Handle_Bags/jhb3.jpg",
-                    "desc": "CODE: 785"
+                    "name": "Beach Bag",
+                    "img": "img/catalog/9Jute_Beach_Bags/jbb1.jpg",
+                    "desc": "CODE: 810"
                 }
             ]
         }
