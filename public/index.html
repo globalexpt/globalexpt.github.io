@@ -130,9 +130,12 @@
             <!-- Catalogue -->
             <h1 class="f2 f2-ns fw6 mid-gray">Pre-Designed</h1>
             <!-- Category -->
-            <div ng-repeat="category in catalogue">
-                <h3 class="f3 gray fw3 ttu tracked mv5">
-                    <span class="dib pb2 bb b--black-10">{{category.name}}</span>
+            <div ng-repeat="category in categories">
+                <h3 class="f3 fw3 ttu tracked mv5">
+                    <a id="{{ toId(category.name) }}" href="#{{ toId(category.name) }}"
+                        class="dib link gray pb2 bb b--black-10">
+                        {{category.name}}
+                    </a>
                 </h3>
                 <!-- Products -->
                 <div class="cf pa2">
@@ -156,6 +159,7 @@
 
     <!-- ORDER -->
     <div id="order" class="tc" ng-if="showOrder">
+        <h1 class="f2 f2-ns fw6 mid-gray mb5">Order/Query</h1>
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSchzAB1ftS0yKNxoziFSJy24xApJkMbZB2ExmwDD-2AVurmqw/viewform?embedded=true"
             width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>

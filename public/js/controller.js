@@ -3,6 +3,8 @@ const controller = ($scope, $http) => {
     $scope.title = '';
     $scope.catalogue = [];
 
+    $scope.toId = (val) => val? val.toLowerCase().replace(/[^a-z0-9]/i,'-'): val;
+
     $http
         .get('res/config.json')
         .then(responseDataTx)

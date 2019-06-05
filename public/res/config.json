@@ -21,7 +21,7 @@
             "href": "#contact"
         }
     ],
-    "catalogue": [
+    "categories": [
         {
             "name": "Jute Shopping Bags",
             "products": [
@@ -83,12 +83,32 @@
                 {
                     "name": "Natural-Colored Jute Pouch",
                     "img": "img/catalog/7Jute_Pouches/jp1.jpg",
-                    "desc": "CODE: 159"
+                    "desc": "CODE: 654"
                 },
                 {
                     "name": "Colored Jute Pouch",
                     "img": "img/catalog/7Jute_Pouches/jp2.jpg",
-                    "desc": "CODE: 160"
+                    "desc": "CODE: 662"
+                }
+            ]
+        },
+        {
+            "name": "Handle Bags",
+            "products": [
+                {
+                    "name": "Ring Handle Jute Bag",
+                    "img": "img/catalog/4Jute_Handle_Bags/jhb1.jpg",
+                    "desc": "CODE: 785"
+                },
+                {
+                    "name": "Rectangular Cane Handle Jute Bag",
+                    "img": "img/catalog/4Jute_Handle_Bags/jhb2.jpg",
+                    "desc": "CODE: 774"
+                },
+                {
+                    "name": "Eye Cane Handle Jute Bag",
+                    "img": "img/catalog/4Jute_Handle_Bags/jhb3.jpg",
+                    "desc": "CODE: 785"
                 }
             ]
         }
