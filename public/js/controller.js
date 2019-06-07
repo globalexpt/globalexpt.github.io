@@ -3,7 +3,7 @@ const controller = ($scope, $http) => {
     $scope.title = '';
     $scope.catalogue = [];
     $scope.order = {
-        submitted: true,
+        submitted: false,
         submitting: false,
         values: {}
     };
