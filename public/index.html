@@ -176,16 +176,64 @@
     </div>
 
     <!-- ORDER -->
-    <div id="order" class="tc" ng-if="showOrder">
-        <h1 class="f2 f2-ns fw6 mid-gray mb5">Order/Query</h1>
-        <iframe
+    <div id="order" ng-if="showOrder">
+        <h1 class="f2 f2-ns fw6 mid-gray mb5 tc">Order/Query</h1>
+
+        <div class="measure-wide center ph4 black-80 pv2 ba b--black-10 br2">
+            <div class="mv4" ng-if="order.submitted">
+                <p class="mb4 lh-copy">Thank you for your order/query. We are working on it and will reach you shortly.</p>
+                <a class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib" ng-click="newOrder()">Another One?</a>
+            </div>
+
+            <form name="orderForm" ng-if="!order.submitted" ng-submit="submitOrder()">
+                <div class="mv5">
+                    <label for="email" class="f6 b db mb2">Email <span class="normal black-60 red">*</span></label>
+                    <input id="email" name="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email"
+                        placeholder="jim@dundermifflin.com" ng-model="order.values.email" required>
+                </div>
+                <div class="mv5">
+                    <label for="query" class="f6 b db mb2">Order/Query <span
+                            class="normal black-60 red">*</span></label>
+                    <textarea id="query" name="query"
+                        ng-model="order.values.query"
+                        class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" required
+                        placeholder="I would like to order..."></textarea>
+                    <small class="f6 black-60 db mb2">Please also provide bag code/link if you have selected
+                        any pre-designed bag from our online catalog</small>
+                </div>
+                <div class="mv5">
+                    <label for="name" class="f6 b db mb2">Name <span class="normal black-60">(optional)</span></label>
+                    <input id="name" name="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text"
+                        placeholder="Jim" ng-model="order.values.name">
+                </div>
+                <div class="mv5">
+                    <label for="contact-no" class="f6 b db mb2">Contact No. <span
+                            class="normal black-60">(optional)</span></label>
+                    <input id="contact-no" name="phone" type="tel" class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                        placeholder="+1-650-450-1212" ng-model="order.values.phone">
+                </div>
+                <div class="mv5">
+                    <label for="company-name" class="f6 b db mb2">Company Name <span
+                            class="normal black-60">(optional)</span></label>
+                    <input id="company-name" name="companyName" class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                        type="text" placeholder="Dunder Mifflin" ng-model="order.values.companyName">
+                </div>
+
+                <div class="mv5">
+                    <input class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib"
+                        type="submit" value="Submit" ng-disabled="order.submitting">
+                </div>
+            </form>
+        </div>
+
+        <!-- <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSchzAB1ftS0yKNxoziFSJy24xApJkMbZB2ExmwDD-2AVurmqw/viewform?embedded=true"
-            width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
     </div>
 
     <!-- CONTACT -->
-    <div id="contact" class="ph6-ns ph4 pv2 black-70">
-        <h1 class="f2 f2-ns fw6 mid-gray tc">Contact</h1>
+    <div id="contact" class="ph6-ns ph4 pv2 black-70 mt5">
+        <h1 class="f2 f2-ns fw6 mid-gray tc mb4">Contact</h1>
         <!-- <a href="mailto:globalexpt@gmail.com" class="link b f3 f2-ns dim black-70 lh-solid">globalexpt@gmail.com</a> -->
 
         <div class="mw7 center ph3-ns cf mb4">
@@ -202,15 +250,18 @@
                     <dt class="f6 b mt4">Marketing Manager</dt>
                     <dd class="ml0">Tuhin Suvra Sen</dd>
                     <dt class="f6 b mt4">Email us</dt>
-                    <dd class="ml0"><a class="link" href="mailto:globalexpt@gmail.com">globalexpt@gmail.com</a></dd>
+                    <dd class="ml0"><a class="link color-inherit underline"
+                            href="mailto:globalexpt@gmail.com">globalexpt@gmail.com</a></dd>
                 </dl>
             </div>
             <div class="fl w-100 w-50-ns pa2">
                 <dl class="lh-title pa3 mt0">
                     <dt class="f6 b">Call us</dt>
                     <dd class="ml0">
-                        <a class="link" href="tel:+919331022673">(+91)-9331022673</a> (Founder)<br>
-                        <a class="link" href="tel:+919062704124">(+91)-9062704124</a> (Marketing Manager)
+                        <a class="link color-inherit underline" href="tel:+919331022673">(+91)-9331022673</a>
+                        (Founder)<br>
+                        <a class="link color-inherit underline" href="tel:+919062704124">(+91)-9062704124</a> (Marketing
+                        Manager)
                     </dd>
                     <dt class="f6 b mt4">Mail us</dt>
                     <dd class="ml0">8/1 R.L. Ghosh Road, Budge Budge,<br> Kolkata -700137, West Bengal, India</dd>
@@ -219,7 +270,7 @@
         </div>
 
         <div class="dib w-100">
-            <div class="w-100 w-50-ns fl tc">
+            <div class="w-100 w-50-ns fl tc mb0-ns mb5">
                 <div class="fb-page" data-href="https://www.facebook.com/globeximp/" data-tabs="timeline" data-width=""
                     data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true"
                     data-show-facepile="true">
@@ -239,7 +290,7 @@
 
     <!-- FOOTER -->
     <!-- bt b--black-10 -->
-    <footer class="pv4 ph3 ph5-m ph6-l mid-gray mt4">
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray mt5">
         <small class="f6 db tc">© {{ year }} <b class="ttu">Global Exporters &amp; Importers</b>, All Rights
             Reserved</small>
         <div class="tc mt3">
