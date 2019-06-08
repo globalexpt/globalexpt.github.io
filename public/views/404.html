@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gei" ng-controller="gei-ctrl">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="48RkBQhHXfcg03B9sTKyowSEyP2uysp3VK4-xqxGWPQ" />
+
+    <title ng-bind="title">Global Exporters & Importers</title>
+
+    <!-- OPEN GRAPH META TAGS: START -->
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
+    <meta name="description"
+        content="Manufacturer & Exporter of custom-printed/designed Eco-Friendly Bags made of Jute/Cotton/Canvas">
+    <meta name="keywords" content="Business, Manufacture, Export, Jute, Cotton, Canvas, Bags">
+    <link rel="author" content="Sk Jhohev" href="https://www.facebook.com/johev09" />
+    <link rel="canonical" href="http://www.globaljutebags.in" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business">
+    <meta property="og:url" content="http://www.globaljutebags.in">
+    <meta property="og:title" content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
+    <meta property="og:description"
+        content="Manufacturer & Exporter of custom-printed/designed Eco-Friendly Bags made of Jute/Cotton/Canvas">
+    <meta property="og:image" content="https://www.globaljutebags.in/img/catalog/8Cotton_Bag/cb3.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://www.globaljutebags.in">
+    <meta property="twitter:title"
+        content="Global Exporters & Importers | Manufacturer and Exporter of Eco-Friendly Bags">
+    <meta property="twitter:description"
+        content="Manufacturer & Exporter of custom-printed/designed Eco-Friendly Bags made of Jute/Cotton/Canvas">
+    <meta property="twitter:image" content="https://www.globaljutebags.in/img/catalog/8Cotton_Bag/cb3.jpg">
+    <!-- OPEN GRAPH META TAGS: END -->
+
+    <!-- FAVICON: START -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bd56d">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICON: END -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="css/override.css">
+
+    <!-- SCRIPTS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141283677-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-141283677-1');
+    </script>
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7785205817841337",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KVGKQ75');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="avenir">
+    <section class="vh-100 flex flex-column justify-center bg-white">
+        <header class="tc ph5 lh-copy">
+            <h1 class="f1 fw3 mb3 dib dark-green bb">Global Exporters &amp; Importers</h1>
+            <h2 class="tc f1-l fw1">Sorry, we can't find the page you are looking for.</h2>
+        </header>
+        <p class="fw1 i tc mt4 f4 f3-l">Are you looking for one of these?</p>
+        <nav class="db w-100 border-box pa4 mt2">
+            <div class="db v-mid w-100 tc">
+                <a ng-repeat="menu in nav" class="f4 mid-gray hover-black-30 link dib mr5-ns mr3 mb0-ns mb3" href="{{menu.href}}"
+                    title="{{menu.label}}" ng-bind="menu.label">
+                </a>
+            </div>
+        </nav>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+
+</html>

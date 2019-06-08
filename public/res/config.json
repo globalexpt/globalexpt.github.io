@@ -6,19 +6,19 @@
     "nav": [
         {
             "label": "Home",
-            "href": "#"
+            "href": "/#"
         },
         {
             "label": "Pre-Designed",
-            "href": "#catalogue"
+            "href": "/#catalogue"
         },
         {
             "label": "Order",
-            "href": "#order"
+            "href": "/#order"
         },
         {
             "label": "Contact",
-            "href": "#contact"
+            "href": "/#contact"
         }
     ],
     "categories": [

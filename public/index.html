@@ -129,18 +129,6 @@
         </div>
     </header>
 
-    <!-- SECONDARY NAV -->
-    <!-- <nav class="db dt-l w-100 border-box pa3 ph5-l fixed">
-        <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
-            <img src="img/favicon.png" class="dib w2 h2 br-100">
-        </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            <a ng-repeat="menu in nav" class="f7 fw4 black-70 hover-black link dib mr3 mr4-l" href="{{menu.href}}"
-                title="{{menu.label}}" ng-bind="menu.label">
-            </a>
-        </div>
-    </nav> -->
-
     <!-- CONTENT -->
     <div id="catalogue" class="mt0 pa5 tc">
         <article>
@@ -181,8 +169,10 @@
 
         <div class="mw7 center ph4 black-80 pv2 ba b--black-10 br2">
             <div class="mv4" ng-if="order.submitted">
-                <p class="mb4 lh-copy">Thank you for your order/query. We are working on it and will reach you shortly.</p>
-                <a class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib" ng-click="newOrder()">Another One?</a>
+                <p class="mb4 lh-copy">Thank you for your order/query. We are working on it and will reach you shortly.
+                </p>
+                <a class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib"
+                    ng-click="newOrder()">Another One?</a>
             </div>
 
             <form name="orderForm" ng-if="!order.submitted" ng-submit="submitOrder()">
@@ -194,8 +184,7 @@
                 <div class="mv5">
                     <label for="query" class="f6 b db mb2">Order/Query <span
                             class="normal black-60 red">*</span></label>
-                    <textarea id="query" name="query"
-                        ng-model="order.values.query"
+                    <textarea id="query" name="query" ng-model="order.values.query"
                         class="db border-box hover-black w-100 ba b--black-20 pa2 br2 mb2" required
                         placeholder="I would like to order..."></textarea>
                     <small class="f6 black-60 db mb2">Please also provide bag code/link if you have selected
@@ -231,10 +220,13 @@
             width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
     </div>
 
+    <!-- <div id="faq" class="mt5">
+        <h1 class="f2 f2-ns fw6 mid-gray tc mb4">FAQ</h1>
+    </div> -->
+
     <!-- CONTACT -->
-    <div id="contact" class="ph6-ns ph4 pv2 black-70 mt5">
+    <div id="contact" class="ph6-ns ph4 pv2 mt5">
         <h1 class="f2 f2-ns fw6 mid-gray tc mb4">Contact</h1>
-        <!-- <a href="mailto:globalexpt@gmail.com" class="link b f3 f2-ns dim black-70 lh-solid">globalexpt@gmail.com</a> -->
 
         <div class="mw7 center ph3-ns cf mb4">
             <!-- <div class="tc">
