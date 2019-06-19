@@ -173,9 +173,9 @@
 
     <!-- ORDER -->
     <div id="order" ng-if="showOrder">
-        <h1 class="f2 f2-ns fw6 mid-gray mb5 tc">Order/Query</h1>
+        <h1 class="f2 f2-ns fw6 mid-gray mb4 tc">Order/Query</h1>
 
-        <div class="mw7 center ph4 black-80 pv2 ba b--black-10 br2">
+        <div class="mw7-l mw6 center ph4 black-80 pv2">
             <div class="mv4" ng-if="order.submitted">
                 <p class="mb4 lh-copy">Thank you for your order/query. We are working on it and will reach you shortly.
                 </p>
@@ -186,33 +186,33 @@
             <form name="orderForm" ng-if="!order.submitted" ng-submit="submitOrder()">
                 <div class="mv5">
                     <label for="email" class="f6 b db mb2">Email <span class="normal black-60 red">*</span></label>
-                    <input id="email" name="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="email"
+                    <input id="email" name="email" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" type="email"
                         placeholder="jim@dundermifflin.com" ng-model="order.values.email" required>
                 </div>
                 <div class="mv5">
                     <label for="query" class="f6 b db mb2">Order/Query <span
                             class="normal black-60 red">*</span></label>
                     <textarea id="query" name="query" ng-model="order.values.query"
-                        class="db border-box hover-black w-100 ba b--black-20 pa2 br2 mb2" required
+                        class="db border-box hover-black w-100 ba b--black-20 br2 pa2 br2 mb2" required
                         placeholder="I would like to order..."></textarea>
                     <small class="f6 black-60 db mb2">Please also provide bag code/link if you have selected
                         any pre-designed bag from our online catalog</small>
                 </div>
                 <div class="mv5">
                     <label for="name" class="f6 b db mb2">Name <span class="normal black-60">(optional)</span></label>
-                    <input id="name" name="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" type="text"
+                    <input id="name" name="name" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" type="text"
                         placeholder="Jim" ng-model="order.values.name">
                 </div>
                 <div class="mv5">
                     <label for="contact-no" class="f6 b db mb2">Contact No. <span
                             class="normal black-60">(optional)</span></label>
-                    <input id="contact-no" name="phone" type="tel" class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                    <input id="contact-no" name="phone" type="tel" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100"
                         placeholder="+1-650-450-1212" ng-model="order.values.phone">
                 </div>
                 <div class="mv5">
                     <label for="company-name" class="f6 b db mb2">Company Name <span
                             class="normal black-60">(optional)</span></label>
-                    <input id="company-name" name="companyName" class="input-reset ba b--black-20 pa2 mb2 db w-100"
+                    <input id="company-name" name="companyName" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100"
                         type="text" placeholder="Dunder Mifflin" ng-model="order.values.companyName">
                 </div>
 
@@ -237,17 +237,12 @@
         <h1 class="f2 f2-ns fw6 mid-gray tc mb4">Contact</h1>
 
         <div class="mw7 center ph3-ns cf mb4">
-            <!-- <div class="tc">
-                <dl class="lh-title pa3 mt0">
-                    <dt class="f6 b mt4">Email us</dt>
-                    <dd class="ml0"><a class="link" href="mailto:globalexpt@gmail.com">globalexpt@gmail.com</a></dd>
-                </dl>
-            </div> -->
             <div class="fl w-100 w-50-ns pa2">
                 <dl class="lh-title pa3 mt0 tl">
                     <dt class="f6 b">Email us</dt>
                     <dd class="ml0 mt1">
-                        <a class="link color-inherit underline" href="mailto:{{contact.email}}">{{contact.email}}</a>
+                        <a class="link color-inherit underline dib mb1" href="mailto:{{contact.email}}">{{contact.email}}</a>
+                        <a class="link color-inherit underline" href="mailto:{{contact.altEmail}}">{{contact.altEmail}}</a>
                     </dd>
                     <dt class="f6 b mt4">Founder</dt>
                     <dd class="ml0 mt1">Mohiuddin Shaikh</dd>
