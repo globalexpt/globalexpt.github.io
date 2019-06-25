@@ -218,56 +218,70 @@
     </div>
 
     <!-- ORDER -->
-    <div id="order" class="mt6" ng-if="showOrder">
+    <div id="order" class="mt6 tc" ng-if="showOrder">
         <h1 class="f2 f2-ns fw6 mid-gray mb4 tc">Order/Query</h1>
-
-        <div class="mw7-l mw6 center ph4 black-80 pv2">
-            <div class="mv4" ng-if="order.submitted">
-                <p class="mb4 lh-copy">Thank you for your order/query. We are working on it and will reach you shortly.
-                </p>
-                <a class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib"
-                    ng-click="newOrder()">Another One?</a>
+        <div class="inline-flex items-center">
+            <div class="dn db-l">
+                <script type="text/javascript" language="javascript">
+                    var aax_size = '300x600';
+                    var aax_pubname = 'globaljutecot-21';
+                    var aax_src = '302';
+                </script>
+                <script type="text/javascript" language="javascript"
+                    src="http://c.amazon-adsystem.com/aax2/assoc.js"></script>
             </div>
 
-            <form name="orderForm" ng-if="!order.submitted" ng-submit="submitOrder()">
-                <div class="mv5">
-                    <label for="email" class="f6 b db mb2">Email <span class="normal black-60 red">*</span></label>
-                    <input id="email" name="email" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" type="email"
-                        placeholder="jim@dundermifflin.com" ng-model="order.values.email" required>
-                </div>
-                <div class="mv5">
-                    <label for="query" class="f6 b db mb2">Order/Query <span
-                            class="normal black-60 red">*</span></label>
-                    <textarea id="query" name="query" ng-model="order.values.query"
-                        class="db border-box hover-black w-100 ba b--black-20 br2 pa2 br2 mb2" required
-                        placeholder="I would like to order..."></textarea>
-                    <small class="f6 black-60 db mb2">Please also provide bag code/link if you have selected
-                        any pre-designed bag from our online catalog</small>
-                </div>
-                <div class="mv5">
-                    <label for="name" class="f6 b db mb2">Name <span class="normal black-60">(optional)</span></label>
-                    <input id="name" name="name" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" type="text"
-                        placeholder="Jim" ng-model="order.values.name">
-                </div>
-                <div class="mv5">
-                    <label for="contact-no" class="f6 b db mb2">Contact No. <span
-                            class="normal black-60">(optional)</span></label>
-                    <input id="contact-no" name="phone" type="tel"
-                        class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" placeholder="+1-650-450-1212"
-                        ng-model="order.values.phone">
-                </div>
-                <div class="mv5">
-                    <label for="company-name" class="f6 b db mb2">Company Name <span
-                            class="normal black-60">(optional)</span></label>
-                    <input id="company-name" name="companyName" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100"
-                        type="text" placeholder="Dunder Mifflin" ng-model="order.values.companyName">
+            <div class="mw7-l mw6 ph4 ml5-l tl black-80 pv2">
+                <div class="mv4" ng-if="order.submitted">
+                    <p class="mb4 lh-copy">Thank you for your order/query. We are working on it and will reach you
+                        shortly.
+                    </p>
+                    <a class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib"
+                        ng-click="newOrder()">Another One?</a>
                 </div>
 
-                <div class="mv5">
-                    <input class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib"
-                        type="submit" value="Submit" ng-disabled="order.submitting">
-                </div>
-            </form>
+                <form name="orderForm" ng-if="!order.submitted" ng-submit="submitOrder()">
+                    <div class="mv5">
+                        <label for="email" class="f6 b db mb2">Email <span class="normal black-60 red">*</span></label>
+                        <input id="email" name="email" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100"
+                            type="email" placeholder="jim@dundermifflin.com" ng-model="order.values.email" required>
+                    </div>
+                    <div class="mv5">
+                        <label for="query" class="f6 b db mb2">Order/Query <span
+                                class="normal black-60 red">*</span></label>
+                        <small class="f6 black-60 db mb2">Please also provide bag code/link if you have selected
+                            any pre-designed bag from our online catalog</small>
+                        <textarea id="query" name="query" ng-model="order.values.query"
+                            class="db border-box hover-black w-100 ba b--black-20 br2 pa2 br2 mb2" required
+                            placeholder="I would like to order..."></textarea>
+                    </div>
+                    <div class="mv5">
+                        <label for="name" class="f6 b db mb2">Name <span
+                                class="normal black-60">(optional)</span></label>
+                        <input id="name" name="name" class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" type="text"
+                            placeholder="Jim" ng-model="order.values.name">
+                    </div>
+                    <div class="mv5">
+                        <label for="contact-no" class="f6 b db mb2">Contact No. <span
+                                class="normal black-60">(optional)</span></label>
+                        <input id="contact-no" name="phone" type="tel"
+                            class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" placeholder="+1-650-450-1212"
+                            ng-model="order.values.phone">
+                    </div>
+                    <div class="mv5">
+                        <label for="company-name" class="f6 b db mb2">Company Name <span
+                                class="normal black-60">(optional)</span></label>
+                        <input id="company-name" name="companyName"
+                            class="input-reset ba b--black-20 br2 pa2 mb2 db w-100" type="text"
+                            placeholder="Dunder Mifflin" ng-model="order.values.companyName">
+                    </div>
+
+                    <div class="mv5">
+                        <input class="b ph3 pv2 input-reset ba b--black bg-transparent bw1 br2 grow pointer f6 dib"
+                            type="submit" value="Submit" ng-disabled="order.submitting">
+                    </div>
+                </form>
+            </div>
         </div>
 
         <!-- <iframe
@@ -275,8 +289,22 @@
             width="100%" height="1150" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
     </div>
 
-    <!-- <div id="faq" class="mt5">
-        <h1 class="f2 f2-ns fw6 mid-gray tc mb4">FAQ</h1>
+    <!-- <div id="customer-reviews" class="mt5">
+        <h1 class="f2 f2-ns fw6 mid-gray tc mb4">Customer Reviews</h1>
+
+        <div class="pa4 mw7 center">
+            <blockquote class="ml0 mt0 pl4 black-90 bl bw2 b--blue">
+                <p class="f5 f4-m f3-l lh-copy measure mt0">
+                    Discipline in typography is a prime virtue. Individuality
+                    must be secured by means that are rational. Distinction
+                    needs to be won by simplicity and restraint. It is equally
+                    true that these qualities need to be infused wiht a
+                    certain spirit and vitality, or they degenerate into
+                    dullness and mediocrity.
+                </p>
+                <cite class="f6 ttu tracked fs-normal">―Stanley Morison</cite>
+            </blockquote>
+        </div>
     </div> -->
 
     <!-- CONTACT -->
@@ -315,21 +343,21 @@
         </div>
 
         <div class="dib w-100">
-            <div class="w-100 w-50-ns fl tc mb0-ns mb5">
+            <!-- <div class="w-100 w-50-ns fl tc mb0-ns mb5">
                 <div class="fb-page" data-href="https://www.facebook.com/globeximp/" data-tabs="timeline" data-width=""
                     data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true"
                     data-show-facepile="true">
                     <blockquote cite="https://www.facebook.com/globeximp/" class="fb-xfbml-parse-ignore"><a
                             href="https://www.facebook.com/globeximp/">Global Exporters &amp; Importers</a></blockquote>
                 </div>
+            </div> -->
+            <!-- <div class="w-100 w-50-ns fl mapouter" ng-if="showMap"> -->
+            <div class="gmap_canvas" width="100%">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.862058533395!2d88.1745678149509!3d22.471817385234697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027dc95555552b%3A0x51d083c5f341c77b!2sGlobal+Exporters+%26+Importers!5e0!3m2!1sen!2sin!4v1559573289488!5m2!1sen!2sin"
+                    width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <div class="w-100 w-50-ns fl mapouter" ng-if="showMap">
-                <div class="gmap_canvas" width="100%">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.862058533395!2d88.1745678149509!3d22.471817385234697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027dc95555552b%3A0x51d083c5f341c77b!2sGlobal+Exporters+%26+Importers!5e0!3m2!1sen!2sin!4v1559573289488!5m2!1sen!2sin"
-                        width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 
